@@ -1,0 +1,200 @@
+% 
+% Annual Cognitive Science Conference
+% Sample LaTeX Paper -- Proceedings Format
+% 
+
+% Original : Ashwin Ram (ashwin@cc.gatech.edu)       04/01/1994
+% Modified : Johanna Moore (jmoore@cs.pitt.edu)      03/17/1995
+% Modified : David Noelle (noelle@ucsd.edu)          03/15/1996
+% Modified : Pat Langley (langley@cs.stanford.edu)   01/26/1997
+% Latex2e corrections by Ramin Charles Nakisa        01/28/1997 
+% Modified : Tina Eliassi-Rad (eliassi@cs.wisc.edu)  01/31/1998
+% Modified : Trisha Yannuzzi (trisha@ircs.upenn.edu) 12/28/1999 (in process)
+% Modified : Mary Ellen Foster (M.E.Foster@ed.ac.uk) 12/11/2000
+% Modified : Ken Forbus                              01/23/2004
+% Modified : Eli M. Silk (esilk@pitt.edu)            05/24/2005
+% Modified : Niels Taatgen (taatgen@cmu.edu)         10/24/2006
+% Modified : David Noelle (dnoelle@ucmerced.edu)     11/19/2014
+% Modified : Roger Levy (rplevy@mit.edu)     12/31/2018
+
+
+
+%% Change "letterpaper" in the following line to "a4paper" if you must.
+
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage{cogsci}
+
+\cogscifinalcopy % Uncomment this line for the final submission 
+
+
+\usepackage{pslatex}
+\usepackage{apacite}
+\usepackage{tikz}
+\usepackage{float} % Roger Levy added this and changed figure/table
+                   % placement to [H] for conformity to Word template,
+                   % though floating tables and figures to top is
+                   % still generally recommended!
+
+%\usepackage[none]{hyphenat} % Sometimes it can be useful to turn off
+%hyphenation for purposes such as spell checking of the resulting
+%PDF.  Uncomment this block to turn off hyphenation.
+
+
+%\setlength\titlebox{4.5cm}
+% You can expand the titlebox if you need extra space
+% to show all the authors. Please do not make the titlebox
+% smaller than 4.5cm (the original size).
+%%If you do, we reserve the right to require you to change it back in
+%%the camera-ready version, which could interfere with the timely
+%%appearance of your paper in the Proceedings.
+
+
+
+\title{Errorless irrationality: removing prediction errors from the inverse base-rate effect}
+ 
+\author{{\large \bf Lenard Dome (lenarddome@gmail.com)} \\
+  Brain Research and Imaging Centre \\
+  University of Plymouth, Research Way, Plymouth, PL6 8BU
+  \AND {\large \bf Andy J. Wills (andy.wills@plymouth.ac.uk)} \\
+  Brain Research and Imaging Centre \\
+  University of Plymouth, Research Way, Plymouth, PL6 8BU}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Include no author information in the initial submission, to facilitate
+blind review.  The abstract should be one paragraph, indented 1/8~inch on both sides,
+in 9~point font with single spacing. The heading ``{\bf Abstract}''
+should be 10~point, bold, centered, with one line of space below
+it. This one-paragraph abstract section is required only for standard
+six page proceedings papers. Following the abstract should be a blank
+line, followed by the header ``{\bf Keywords:}'' and a list of
+descriptive keywords separated by semicolons, all in 9~point font, as
+shown below.
+
+\textbf{Keywords:} 
+irrationality; prediction error; inverse base-rate effect; categorization; contingency learning
+\end{abstract}
+
+
+\section{Introduction}
+
+Inverse base-rate effect \cite<IBRE, >{medin1988problem} is an irrational tendency in humans to overweigh rare events when faced with ambiguity.
+In a traditional design, people learn to categorise two overlapping sets of features under two distinct labels.
+These sets share a single feature, A, and posess a unique feature, B and C, predictive of their respective category label.
+During learning, these sets of features occur at different frequencies.
+The features under the common label usually occur three times as much as features under the rare label \cite{kruschke1996base}.
+Following training, people categorise features presented by themselves and un unique combinations.
+People optimally label uniquely predictive features, B and C, presented individually with teir respective common and rare label.
+Responses on the shared feature A also show base-rate following.
+But when uniquely predictive features are paired, B and C, people tend to respond with the rare category label.
+According Classical Probability Theory, the rational response is to attribute the common label to this ambiguous compound, because it is the most frequently occuring label.
+This rare bias on ambiguous combinations of BC have been observed across different variety of different experiments and manipulations \cite{kalish2001inverse,don2017effects,don2017effects,inkster2022effect,wills2014attention}.
+For a more thourough introduction into this irrational bias, see a review by \citeA{don2021attention}.
+
+\subsection*{Assumptions of models of the IBRE}
+
+The most prominent theories of the inverse base-rate effect involve an attentional mechanism that drives not only learning but responding as well.
+These models are EXIT \cite{kruschke2001toward}, a three-layer neural network with competitive attentional gating and a four-layer neural network with an additional rapid attentional shift \cite{paskewitz2020dissecting}.
+All these explanations rely on a process that reallocates attention in response to prediction errors.
+Their explanation is simple.
+During learning, people learn to label the AB compound first.
+They are still learning to label the AC compound, so when they make an error, attention relocates towards the uniquely predictive feature C to reduce future errors.
+This results in C acquiring higher attentional salience than B.
+When the ambiguous BC compound is presented, C will dominate responding, resulting in an irrational tendency to respond with the rare label.
+According to these models, this irrationality results from an optimisation process that tries to reduce the errors people make.
+
+\subsection*{Current Study}
+
+In this work, we intend to test this basic assumption of models of the IBRE.
+In the following two experiments, we will gradually remove components from the design traditionally associated with prediction error.
+In our first attempt, building on the observational learning condition of Experiment 2 in \citeA{johansen2007paradoxical}, we implement the canonical IBRE design with a caveat that category labels are presented in unison with features.
+
+In our second attempt, we further remove the causal relationship between features and category labels.
+The goal was to remove any design component that might affect attentional allocation.
+Any presumption of causal relationship can inadvertantly relacote attention in line with the direction of causality between features and labels.
+
+\subsection*{Related Work}
+
+We will build on work carried out by \citeA{johansen2007paradoxical}.
+\citeA{johansen2007paradoxical} failed to observe the inverse base-rate effect in an observational learning condition, where category labels were presented with features at the same time to participants.
+They largely interpreted their results in opposition to EXIT \cite{kruschke2001toward}, but their experimental procedure does not correspond to the standard inverse base-rate effect procedure.
+Their design involves disjoint-cues (where categories shared no features in common), while the canonical design depends on a shared features during training that facilitates attentional relocation, which in turn moves responding towards the irrational rare preference.
+The only instance when they observed a rare bias was when common features presented in compound during training were paired with a rare feature presented by itself during training.
+A simple explanation for that result is that the rare feature developed stronger connections with the category label.
+Compound features share the connection with the category label, so any update to these connections dissipate between them.
+There is no need to relocate attention to reduce errors, therefore attention will not push responding towards the rare label.
+
+\section{Experiment 1}
+
+Below, we detail our first attempt to test whether we could observe the rare response bias without any explicit error-driven psychological mechanism.
+
+
+\subsection{Method}
+
+\begin{table}[!ht]
+  \begin{center}
+    \caption{Abstract design of Experiment 1 including both test and training phases. \\}
+    \label{tab:abstract-exp1}
+    \begin{tabular}{llr} % text alignments
+      \textbf{Training (Relative Frequencies)} & \textbf{Test}& \\
+      \hline
+      & \\
+      $AB \to common_{1}$ (x 3) &  A, B, C,         &  \\
+      $AC \to rare_{1}$   (x 1) &  AB, AC, BC      & x 20 \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\subsection{Results and Discussion}
+
+\section{Experiment 2}
+
+\subsection{Method}
+
+\begin{table}[!ht]
+  \begin{center}
+    \caption{Abstract design of Experiment 2 including both test and training phases. X and Y are in place of the category labels. During the test phase, participants needed to select either X or Y to complete the features shown below.\\}
+    \label{tab:abstract-exp2}
+    \begin{tabular}{llr} % text alignments
+      \textbf{Training (Relative Frequencies)} & \textbf{Test}& \\
+      \hline
+      & \\
+      ABX x 3 &  A, B, C,         &  \\
+      ACY x 1 &  AB, AC, BC      & x 20 \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\subsection{Results and Discussion}
+
+\section{Discussion}
+
+- auxiliary phenomenon (Wills CIRP addition)
+- Things that any theory of IBRE should explain
+- current theories fall short
+
+\section{Open Science}
+
+\section{Acknowledgments}
+
+In the \textbf{initial submission}, please \textbf{do not include
+  acknowledgements}, to preserve anonymity.  In the \textbf{final submission},
+place acknowledgments (including funding information) in a section \textbf{at
+the end of the paper}.
+
+\bibliographystyle{apacite}
+
+\setlength{\bibleftmargin}{.125in}
+\setlength{\bibindent}{-\bibleftmargin}
+
+\bibliography{library}
+
+
+\end{document}
