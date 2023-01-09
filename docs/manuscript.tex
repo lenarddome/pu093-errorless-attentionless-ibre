@@ -1,7 +1,7 @@
-% 
+%
 % Annual Cognitive Science Conference
 % Sample LaTeX Paper -- Proceedings Format
-% 
+%
 
 % Original : Ashwin Ram (ashwin@cc.gatech.edu)       04/01/1994
 % Modified : Johanna Moore (jmoore@cs.pitt.edu)      03/17/1995
@@ -17,11 +17,10 @@
 % Modified : David Noelle (dnoelle@ucmerced.edu)     11/19/2014
 % Modified : Roger Levy (rplevy@mit.edu)     12/31/2018
 
-
-
 %% Change "letterpaper" in the following line to "a4paper" if you must.
 
 \documentclass[10pt,letterpaper]{article}
+
 \usepackage{hyperref}
 
 \usepackage{cogsci}
@@ -86,59 +85,65 @@ Following training, people categorise features presented by themselves and un un
 People optimally label uniquely predictive features, B and C, presented individually with their respective common and rare labels.
 Responses on the shared feature A also show base-rate following.
 But when uniquely predictive features are paired, B and C, people tend to respond with the rare category label.
-According to Classical Probability Theory, the rational response is to attribute the common label to this ambiguous compound, because it is the most frequently occuring label.
-This rare bias on ambiguous combinations of BC has been observed across a different variety experimental manipulations \cite{kalish2001inverse,don2017effects,don2017effects,inkster2022effect,wills2014attention}.
-For a more thorough introduction to this irrational bias, see a review by \citeA{don2021attention}.
+According to Classical Probability Theory, the rational response is to attribute the common label to this ambiguous compound, because it is the most frequently occurring label.
+This rare bias on ambiguous combinations of BC has been observed across a different variety of experimental manipulations \cite{kalish2001inverse,don2017effects,don2021attention,inkster2022effect,wills2014attention}.
+For a more thorough introduction to this irrational bias, see a review by \citeA{don2021hearing}.
 
-\subsection*{Assumptions of models of the IBRE}
+\subsection{Assumptions of theories of the IBRE}
 
 The most prominent theories of the inverse base-rate effect involve an attentional mechanism that drives not only learning but responding as well.
-These models are EXIT \cite{kruschke2001toward}, a three-layer neural network with competitive attentional gating and a four-layer neural network with an additional rapid attentional shift \cite{paskewitz2020dissecting}.
-All these explanations rely on a process that reallocates attention in response to prediction errors.
+These theories are formal models.
+They are: a neural network with an exemplar-mediated attention to distinctive input, EXIT \cite{kruschke2001toward}, a three-layer neural network with competitive attentional gating, and a four-layer neural network with an additional rapid attentional shift \cite{paskewitz2020dissecting}.
+All these explanations rely on a process that reallocates attention in response to prediction errors - they update attentional values according to gradient descent.
 Their explanation is simple.
 During learning, people learn to label the AB compound first.
 They are still learning to label the AC compound, so when they make an error, attention relocates towards the uniquely predictive feature C to reduce future errors.
 This results in C acquiring higher attentional salience than B.
 When the ambiguous BC compound is presented, C will dominate responding, resulting in an irrational tendency to respond with the rare label.
 According to these models, this irrationality results from an optimisation process that tries to reduce the errors people make.
-This process results in an asymmetric representation that can be summarised as AB belongs to common, $AB \to common$, and C belongs to rare, $C \to rare$.
+This process results in an asymmetric representation that can be summarised as AB belongs to common, $AB \to common$, and C belongs to rare, $C \to rare$ \cite{kruschke2001inverse}.
 
-\subsection*{Current Study}
+\subsection{Current Study}
 
-In this work, we intend to test this basic assumption of models of the IBRE.
+In this work, we intend to test this basic assumption of these theories.
 In the following two experiments, we will gradually remove components from the design traditionally associated with prediction error.
 Our overarching goal is to investigate whether we can still observe the IBRE, even if we experimentally remove a crucial assumption of already existing accounts.
 In our first attempt, building on the observational learning condition of Experiment 2 in \citeA{johansen2007paradoxical}, we implement the canonical IBRE design with a caveat that category labels are presented in unison with features.
 
 In our second attempt, we further remove the causal relationship between features and category labels.
-The goal was to remove any design component that might affect attentional allocation or development of assymmetric representation in response to errors.
+The goal was to remove any design component that might affect attentional allocation or the development of asymmetric representation in response to errors.
 Any presumption of a causal relationship can inadvertently relocate attention in line with the direction of causality between features and labels.
 
-\subsection*{Related Work}
+\subsection{Related Work}
 
 To our knowledge, there is only one attempt to implement the IBRE procedure without explicit feedback.
-In their Experiment 2, \citeA{johansen2007paradoxical} tried to observe the inverse base-rate effect both in a predictive-learning condition and in an observational learning condition, where category labels were presented with features at the same time to participants.
-Their design involved disjoint cues (where categories shared no features in common), while the canonical design depends on a shared feature during training that facilitates attentional relocation.
+In their Experiment 2, \citeA{johansen2007paradoxical} tried to observe the inverse base-rate effect both in a predictive-learning condition and in an observational learning condition.
+In the observational learning condition, category labels and features were presented at the same time to participants.
+Their design involved disjoint cues (where categories shared no features in common), while the canonical design depends on a shared feature during training.
+According to the theories of the IBRE, this shared feature facilitates attentional relocation.
 This attentional tuning in turn pushes responding toward the rare label.
+In contrast, \citeA{johansen2007paradoxical} trained participants on $AB \to common$ and $C \to rare$.
+% LD: maybe include here some info on the shared-cue effect?
 Their design was optimized to investigate the hypothesised asymmetric cognitive representation of the two categories.
-As a result, the only instance when they observed a rare bias was when common features presented in compound during training were paired with a rare feature presented by itself during training.
-This provided evidence for the asymmetric cognitive representation hypothesised to develop during training.
+As a result, the only instance when they observed a rare bias was when the common feature, $B$ ,presented in compound during training was paired with a rare, $C$, feature presented by itself during training.
+This provided evidence for the asymmetric cognitive representation \cite{kruschke2001inverse} hypothesised to develop during training.
+% LD: this speculation might be redundant?
 A simple neural-network explanation can account for this by positing that the rare feature developed stronger connections with the category label.
 Compound features share the connection with the category label, so any update to these connections dissipates between them.
 There is no need to relocate attention to reduce errors, therefore attention will not bias responding toward the rare label.
 But stronger $C \to rare$ feature-label connections will result in a rare bias on BC compounds during the test phase.
 In order to investigate the role of prediction error in response to feedback, we need to tweak their observational learning condition to conform to a more canonical implementation of the procedure.
-\citeA{johansen2007paradoxical} included the result of a short pilot experiment in their Appendix.
+This will involve reimplementing the shared feature.
+In terms of a clear observational-learning version of the IBRE, \citeA{johansen2007paradoxical} included the result of a short pilot experiment in their Appendix.
 There are no details about the procedure of this experiment, so we cannot make direct comparisons.
 We will follow up on that line of investigation.
 
 Our current study modified the canonical IBRE procedure in an attempt to remove error-driven components from the design - which includes a shared cue.
-This contrasts Experiment 2 in \citeA{johansen2007paradoxical}, who tried to remove the shared cue that pushed attention towards C during training and resulted in the assymetric representation.
+This contrasts Experiment 2 in \citeA{johansen2007paradoxical}, who tried to remove the shared cue that pushed attention towards C during training and resulted in the asymetric representation.
 Here, we strictly focus on prediction error concerning behaviour.
-% I will also need to include Experiment 3 listed shared cue condition
+% LD: I will also need to include Experiment 3 listed shared cue condition?
 
-
-% I need to go through some studies because I think there is at least one more
+% LD: I need to go through some studies because I think there is at least one more
 The only two studies directly looking at error-driven processes in the IBRE are \citeA{inkster2022neural} and \citeA{wills2014attention}.
 \citeA{wills2014attention} observed posterior selection negativity and concurrent frontal positivity for C relative to B, which gave evidence for an error-driven selective attentional learning process.
 \citeA{inkster2022neural} carried out a direct investigation into brain regions underlying error-driven learning in the IBRE.
@@ -154,7 +159,7 @@ Below, we detail our first attempt to test whether we could observe the rare res
 The design component which is most likely to result in any error-driven tuning is feedback.
 To remove feedback, we will present category labels with their respective features.
 We retain the sequential property of the experiment, which means that participants learn about feature and category relationships on a trial-by-trial basis.
-% work out how models might predict rational responding
+% LD: work out how models might predict rational responding?
 
 Experiment 1 is a conceptual replication of an experiment included in the Appendix of \citeA{johansen2007paradoxical}.
 The only information available is the list of test items (23), the doubled-up design (2 sets of categories and features), and the sample size.
@@ -162,19 +167,18 @@ We substantially simplified our implementation by removing the doubled-up design
 
 \subsection{Method}
 
-\subsubsection*{Participants}
+\subsubsection{Participants}
 
 Participants were undergraduate students who received course credit for their participation.
 We recruited 169 participants online through the SONA recruitment system.
 
-\subsubsection*{Apparatus}
+\subsubsection{Apparatus}
 
 The experiment was programmed in JsPsych \cite{deleeuw2015JsPsych} to be run in a web browser.
-The experiment code is avalaible at \href{https://osf.io/auwvt/?view_only=2dc8384074fa4bcf9f2e3937fdaee2b4}{OSF} and \href{https://github.com/lenarddome/ply216-observational-ibre}{GitHub}.
 Participants completed the experiment on their personal computers.
 The experiment did not allow the use of tablets and smartphones.
 
-\subsubsection*{Stimuli}
+\subsubsection{Stimuli}
 
 Category labels corresponded with response keys and were called Disease \textbf{Z} and Disease \textbf{L}.
 Category features were symptoms: fever, headache, and rash.
@@ -185,7 +189,7 @@ The list was compiled from an online repository of popular baby names\footnote[1
 We selected the 50 most popular male and female names from 2021.
 Disease names corresponded to response keys and were randomly allocated to either the common or rare category label at the beginning of each session.
 
-\subsubsection*{Procedure}
+\subsubsection{Procedure}
 
 Table \ref{tab:abstract-exp1} summarises the abstract design of the experiment.
 This design is the simplest implementation of the IBRE procedure to date.
@@ -206,6 +210,7 @@ Participants had to respond by pressing either Z or L on the keyboard.
 They had 10 seconds to do so, otherwise, a '\textit{Please respond faster!}' message appeared.
 After the button press, there was no feedback,
 Each unique test item and training item (occurring in the test phase) was repeated 20 times.
+The test phase, therefore, included 120 trials, which were broken down into 5 blocks of 24 trials.
 
 \begin{table}[!ht]
   \begin{center}
@@ -222,7 +227,7 @@ Each unique test item and training item (occurring in the test phase) was repeat
   \end{center}
 \end{table}
 
-\subsubsection*{Analysis}
+\subsubsection{Analysis}
 
 In order to test the presence of the IBRE, we calculated a Bayes Factor for a one-sample design.
 We calculate the probability of responding with the rare label on the critical BC test item, $P(rare|BC)$, for each participant.
@@ -233,7 +238,7 @@ If the mean probability of $P(rare|BC)$ is higher than 0.5, we conclude that we 
 Values lower than 0.5 would indicate rational responding.
 We used the method implemented in the BayesFactor R package \cite{morey2022bayes}.
 
-\subsubsection*{Exclusion}
+\subsubsection{Exclusion}
 
 To match performance with the predictive learning implementations of the IBRE, we decided to exclude participants whose test performance on the training items fell below 0.75 accuracy.
 We arrived at this threshold by testing all different levels of accuracy by calculating the Bayes factors for binomial data.
@@ -287,7 +292,7 @@ In addition, stimuli need to be constructed in a way that reduces the chance of 
 
 \section{Experiment 2}
 
-In this experiment, we implemented the IBRE in a way most similar to cued-recall memory tasks.
+In this experiment, we implemented the IBRE in a way most similar to cued recall tasks.
 Previous category labels were treated as features.
 And features were selected to be solid black geometric shapes.
 The task asked participants to memorise the arrangement of these shapes.
@@ -296,12 +301,12 @@ This further minimised the chances of having any design component suggestive of 
 
 \subsection{Method}
 
-\subsubsection*{Participants}
+\subsubsection{Participants}
 
-We recruited 65 undergraduate students who completed the exeriment for partial course credit.
-Recruitment was done via the SONA recruitment system.
+We recruited 65 undergraduate students who completed the experiment for partial course credit.
+Recruitment was done via the SONA recruitment system. \\
 
-\subsubsection*{Stimuli}
+\subsubsection{Stimuli}
 
 \begin{figure}
   \begin{center}
@@ -311,7 +316,11 @@ Recruitment was done via the SONA recruitment system.
   \end{center}
 \end{figure}
 
-\subsubsection*{Procedure}
+Stimuli were common solid geometric shapes, shown in Figure \ref*{figure:exp2-stimuli}.
+Common and rare category labels were turned into features X and Y respectively.
+Each shape was randomly allocated to one of the abstract features shown in Table \ref*{tab:abstract-exp2}.
+
+\subsubsection{Procedure}
 
 \begin{table}[!ht]
   \begin{center}
@@ -321,30 +330,42 @@ Recruitment was done via the SONA recruitment system.
       \textbf{Training (Relative Frequencies)} & \textbf{Test}& \\
       \hline
       % & \\
-      ABX x 3 &  A, B, C,         &  \\
+      ABX x 3 &  A, B, C,        & \\
       ACY x 1 &  AB, AC, BC      & x 20 \\
       \hline
     \end{tabular}
   \end{center}
 \end{table}
 
-I have a myriads of things to say here. \\
+Table \ref*{tab:abstract-exp2} depicts the abstract experiment design.
+Similar to the previous experiment, participants completed two phases: an encoding/training and a cued-recall/test phase.
+In the training/encoding phase, participants were repeatedly exposed to the exemplars and were asked to memorise the arrangement of geometric shapes.
+Compared to Experiment 1, exemplars were composed of three geometric shapes.
+On each trial, geometric shapes appeared in random order so the position of features on the screen was completely counterbalanced.
+This resulted in 24 trials within each block, which contained 18 common trials and 6 rare trials.
+Similar to Experiment 1, participants could complete a maximum of 5 blocks.
+After the first block, they were given a chance after completing each block to move straight to the test phase.
+The trial structure and response deadlines corresponded to Experiment 1.
 
-\subsubsection*{Analysis and Exclusion}
+In the test phase, participants were shown \textit{incomplete} arrangement of geometric shapes and were asked to complete them.
+On each test trial, they were asked to select either \textbf{X} or \textbf{Y} to complete the arrangement.
+Similar to Experiment 1, each test item (incomplete arrangement of shapes) appeared 20 times. 
+Similarly, the test phase was composed of 120 trials presented across 5 blocks of 24 trials.
+
+\subsubsection{Analysis and Exclusion}
 
 We applied the same analysis and exclusion methods as in Experiment 1.
 
 \subsection{Results and Discussion}
 
 After exclusion, 30 participants made it into our analysis.
-The group-level mean probabilities are shown on Table \ref{tab:results-exp2}.
-The resuls are a qualitative and ordinal match to Experiment 1.
-Participants showed a clear common preference for stimuli A, $M_{A} = 0.21$, 95\% HDI $[0.11, 0.31]$, $\mathrm{BF}_{10} = 11,312.94$.
+The group-level mean probabilities are shown in Table \ref{tab:results-exp2}.
+The results are a qualitative and ordinal match to Experiment 1.
+Participants showed a clear common preference for stimuli A, $M_{A} = 0.77$, 95\% HDI $[0.68, 0.87]$, $\mathrm{BF}_{10} = 10,316.41$.
 
 \begin{table}[H]
   \begin{center}
-    \caption{Group-level mean probabilities for each stimulus
-    presented during the test phase in Experiment 2 after exclusion.\\}
+    \caption{Group-level mean probabilities for each stimulus presented during the test phase in Experiment 2 after exclusion.\\}
     \label{tab:results-exp2}
     \vskip 0.12in
     \begin{tabular}{rcc}
@@ -362,24 +383,52 @@ Participants showed a clear common preference for stimuli A, $M_{A} = 0.21$, 95\
 \end{table}
 
 Participants also showed a reliable rare preference on ambiguous BC trials, $M_{BC} = 0.64$, 95\% HDI $[0.53, 0.75]$, $\mathrm{BF}_{10} = 4.09$
-Therefore we conclude that we reliably detected the IBRE.
+This gives us a sufficient amount of evidence to conclude that we have observed the IBRE.
+
+Here, we further demonstrated that the IBRE can arise without experimental-design components that explicitly promote an error-driven process.
+In addition, Experiment 2 suggests that the IBRE generalises beyond simple predictive-learning \cite{kruschke1996base,don2021hearing} and decision-making \cite{johansen2007paradoxical} paradigms.
 
 \section{Discussion}
 
+In this study, we tested a central assumption of the most prominent theories of the IBRE.
+This central assumption was prediction error.
+In our first attempt, we implemented an observational learning version of the canonical IBRE procedure.
+This meant that features and category labels appeared on the screen at the same time.
+Participants learned about categories by reading complete sentences that describe what symptoms people exhibit and what diseases they have.
+The experiment included no feedback and required no responses from participants during training.
+From a theoretical perspective, there was no opportunity for making an explicit error, therefore the condition for prediction error.
+Regardless, we observed the inverse base-rate effect.
+One limitation of this approach was that there are assumed causal relationships between features (symptoms) and labels (diseases).
+These relationships can predispose participants to make feature-to-label predictions, which will results in prediction error and attentional relocation.
+In our second attempt, we further removed the causal relationship between features and labels by changing the stimuli and their presentation.
+Here, participants saw nothing but an arrangement of geometric shapes, where previous category labels were treated as features.
+There were no causal links between features and labels.
+When participants needed to complete incomplete arrangements of these shapes, they still exhibited a rare bias on $BC$ trials.
+So, we still observed the IBRE.
+
+
+
+% LD: so it seems that johansen et al treated asymmetric representation as an experimental condition and not as a theoretical construct
+% LD: I think this is a problem, because asymmetric representation is hypothesized to be a asymmetry in the way the two categories represented
 - asymmetric representation as an assumption
 
-Asymmetric representation can arise in different ways.
-One way it is manifested is the attentional tuning of cognitive representation of category exemplars.
-Another scenario is
+% Asymmetric representation can arise in different ways.
+The hypothesised way asymmetric representation is manifested is the attentional tuning of cognitive representation of category exemplars.
 
 - auxiliary phenomenon (Wills CIRP addition)
 - Things that any theory of IBRE should explain
 - current theories fall short
 - eye-tracking and attention
+- attention can still be allocated asymmetrically to drive the distinguishability of categories.
+
+\section{Conclusion}
 
 \section{Open Science}
 
-All things will be free.
+We made available the two experiments written in javascript, the analysis code, the raw data, and all other supplementary materials.
+Repositories related to Experiment 1 can be found on \href{https://osf.io/auwvt/?view_only=2dc8384074fa4bcf9f2e3937fdaee2b4}{OSF}, and \href{https://github.com/lenarddome/ply216-observational-ibre}{GitHub}.
+Repositories related to Experiment 2 can be found on \href{https://osf.io/2tmc4/?view_only=489ebc888ef84a6b9b904072cfbe74df}{OSF} and \href{https://github.com/lenarddome/ply222-non-causal-ibre}{Github}.
+The main repository that includes this manuscript and links to the materials for the two experiments can be found on \href{https://github.com/lenarddome/pu093-errorless-attentionless-ibre}{GitHub}.
 
 \bibliographystyle{apacite}
 
@@ -387,6 +436,5 @@ All things will be free.
 \setlength{\bibindent}{-\bibleftmargin}
 
 \bibliography{library}
-
 
 \end{document}
