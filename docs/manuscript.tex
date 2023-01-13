@@ -69,13 +69,13 @@
 
 The inverse base-rate effect is a robust irrational bias that arises when people face ambiguity.
 The most prominent theories of this irrational bias depend on prediction error.
-In this study, we gradually removed elements of a predictive learning design.
+In this study, we gradually detached elements of a predictive learning design to test the extent to which error-driven processes underly this bias.
 In our first experiment, we removed explicit feedback by implementing the inverse base-rate effect in an observational learning procedure. 
-In our second study, we further removed any causal relationship between stimulus features and category labels.
+In our second study, we further removed any causal relationship between stimulus features and category labels by moving towards an unsupervised learning procedure.
 This removed any information participants could use to identify category labels.
 In both experiments, the inverse base-rate effect persisted and remained robust.
 This outcome suggests that this irrational bias is independent of supervised learning procedures.
-We propose that any theories and models of the inverse base-rate effect must be designed in a way that allows information encoding and connection updates to proceed without prediction error.
+We propose that any theories and models of the inverse base-rate effect must manage information encoding and connection updates without explicit prediction error.
 We end by proposing two clear paths for future investigations.
 
 \textbf{Keywords:} 
@@ -86,15 +86,15 @@ irrationality; prediction error; inverse base-rate effect; categorization; conti
 \section{Introduction}
 
 The \textit{inverse base-rate effect} \cite<IBRE, >{medin1988problem} is an irrational tendency in humans to overweigh rare events when faced with ambiguity.
-In a traditional design, people learn to categorise two overlapping sets of features under two distinct labels.
+In a traditional design, people learn to categorise two overlapping sets of features under two distinct category labels.
 These sets share a single feature, A, and possess a unique feature, B and C, predictive of their respective category label.
 During learning, these sets of features occur at different frequencies.
 The features under the common label usually occur three times as much as features under the rare label \cite{kruschke1996base}.
 Following training, people categorise features presented by themselves and in novel combinations.
 People tend to optimally label uniquely predictive features, $B$ and $C$, with their respective common and rare labels when presented by themselves.
-Responses on the shared feature A tend to show base-rate following.
+Responses on the shared feature $A$ tend to show base-rate following.
 But when uniquely predictive features are paired, $BC$, people tend to respond with the rare category label.
-According to Classical Probability Theory, the rational response is to attribute the common label to this ambiguous compound, because it is the most frequently occurring label.
+According to Classical Probability Theory, the rational response is to categorise this ambiguous combination under the common label, because it is the most frequently occurring label.
 This rare bias on ambiguous combinations of BC has been observed across a different variety of experimental manipulations \cite{kalish2001inverse,don2017effects,don2021attention,inkster2022effect,wills2014attention}.
 For a more thorough introduction to this irrational bias, see a review by \citeA{don2021hearing}.
 
@@ -111,7 +111,7 @@ They are still learning to label the AC compound, so when they make an error, at
 This results in C acquiring higher attentional salience than B.
 When the ambiguous BC compound is presented, C will dominate responding, resulting in an irrational tendency to respond with the rare label.
 According to these models, this irrationality results from an optimisation process that tries to reduce the errors people make.
-This process results in an asymmetric representation that can be summarised as AB belongs to common, $AB \to common$, and C belongs to rare, $C \to rare$ \cite{kruschke2001inverse}.
+This process creates an asymmetric cognitive representation that can be summarised as AB belongs to common, $AB \to common$, and C belongs to rare, $C \to rare$ \cite{kruschke2001inverse}.
 
 \subsection{Current Study}
 
@@ -127,29 +127,32 @@ Any presumption of a causal relationship can inadvertently relocate attention in
 \subsection{Related Work}
 
 To our knowledge, there is only one attempt to implement the IBRE procedure without explicit feedback.
-In their Experiment 2, \citeA{johansen2007paradoxical} tried to observe the inverse base-rate effect both in a predictive-learning condition and in an observational learning condition.
+In terms of a clear observational-learning version of the IBRE, \citeA{johansen2007paradoxical} included the result of a short pilot experiment in their Appendix.
+There are no details about the procedure of this experiment, so we cannot make direct comparisons.
+Nonetheless, in their Experiment 2, \citeA{johansen2007paradoxical} tried to observe the inverse base-rate effect both in a predictive-learning condition and in an observational-learning condition.
 In the observational learning condition, category labels and features appeared together at the same time on the computer screen.
-Their design involved disjoint cues (where categories shared no features in common), while the canonical design depends on a shared feature during training \cite{kruschke2001inverse, wills2014attention}.
+Their design involved disjoint cues where categories shared no features in common.
+The canonical IBRE design involves a shared feature during training \cite{kruschke2001inverse, wills2014attention}.
 According to the theories of the IBRE, this shared feature facilitates attentional relocation.
 This attentional tuning in turn pushes responding toward the rare label.
 In contrast, \citeA{johansen2007paradoxical} trained participants on $AB \to common$ and $C \to rare$.
+Similarly, the $common$ category occured three times as often as $rare$.
 % LD: maybe include here some info on the shared-cue effect?
 Their design was optimized to investigate the hypothesised asymmetric cognitive representation of the two categories.
 As a result, the only instance when they observed a rare bias was when the common feature, $B$ ,presented in compound during training was paired with a rare, $C$, feature presented by itself during training.
 This provided evidence for the asymmetric cognitive representation \cite{kruschke2001inverse} hypothesised to develop during training.
 % LD: this speculation might be redundant?
-A simple neural-network explanation can account for this by positing that the rare feature developed stronger connections with the category label.
+
+A simple neural-network explanation can account for \citeA{johansen2007paradoxical}'s.
+In a simple network, the rare feature develops stronger connections with the category label.
 Compound features share the connection with the category label, so any update to these connections dissipates between them.
 There is no need to relocate attention to reduce errors, therefore attention will not bias responding toward the rare label.
 But stronger $C \to rare$ feature-label connections will result in a rare bias on BC compounds during the test phase.
+This is strong evidence for the assymetric cognitive representation, but it still builds on the presence of explicit prediction error.
 In order to investigate the role of prediction error in response to feedback, we need to tweak their observational learning condition to conform to a more canonical implementation of the procedure.
 This will involve reimplementing the shared feature.
-In terms of a clear observational-learning version of the IBRE, \citeA{johansen2007paradoxical} included the result of a short pilot experiment in their Appendix.
-There are no details about the procedure of this experiment, so we cannot make direct comparisons.
-We will follow up on that line of investigation.
-
-Our current study modified the canonical IBRE procedure in an attempt to remove error-driven components from the design - which includes a shared cue.
-This contrasts Experiment 2 in \citeA{johansen2007paradoxical}, who tried to remove the shared cue that pushed attention towards C during training and resulted in the asymetric representation.
+Our current study modified the canonical IBRE procedure in an attempt to remove components from the design that is associated with explicit prediction error.
+This contrasts Experiment 2 in \citeA{johansen2007paradoxical}, who tried to remove the shared cue that pushed attention towards C during training in response to prediction error.
 Here, we strictly focus on prediction error as the element of the experimental procedure.
 % LD: I will also need to include Experiment 3 listed shared cue condition?
 
@@ -160,8 +163,10 @@ The only two studies directly looking at error-driven processes in the IBRE are 
 Their ROI analysis explicitly targeted areas that were hypothesised to be involved in the computation of prediction error.
 They showed that these areas exhibited greater activation during the test phase for C relative to B with a presence of a shared cue during training.
 Both \citeA{wills2014attention} and \citeA{inkster2022neural} gave strong evidence in support of error-driven attentional learning accounts of the IBRE.
-In our study, we will look for the effect while trying to take out prediction error from the experimental design.
-In contrast, they looked for the neural substrates of error-driven accounts of the effect.
+In our study, we will look for the effect while trying reduce the chance that cognitive processes calculate prediction error through modifying the experimental design.
+In contrast, they looked for the neural substrates of error-driven processes incoporated into explanations of the effect.
+% This presumes that prediction error is necessary for the inverse base-rate effect.
+% Arguably, one can predict that if there is no clear explicit design component (feedback) promoting prediction error as conceptualised in the models, the IBRE will not occur.
 
 \section{Experiment 1}
 
@@ -302,7 +307,7 @@ In addition, stimuli need to be constructed in a way that reduces the chance of 
 
 \section{Experiment 2}
 
-In this experiment, we implemented the IBRE in a way most similar to cued recall tasks.
+In this experiment, we implemented the IBRE in a way most similar to unsupervised category learning paradigms.
 Previous category labels were treated as features.
 And features were selected to be solid black geometric shapes.
 The task asked participants to memorise the arrangement of these shapes.
@@ -348,7 +353,7 @@ Each shape was randomly allocated to one of the abstract features shown in Table
 \end{table}
 
 Table \ref*{tab:abstract-exp2} depicts the abstract experiment design.
-Similar to the previous experiment, participants completed two phases: an encoding/training and a cued-recall/test phase.
+Similar to the previous experiment, participants completed two phases: an encoding/training and a test phase.
 In the training/encoding phase, participants were repeatedly exposed to the exemplars and were asked to memorise the arrangement of geometric shapes.
 Compared to Experiment 1, exemplars were composed of three geometric shapes.
 On each trial, geometric shapes appeared in random order so the position of features on the screen was completely counterbalanced.
@@ -420,7 +425,7 @@ We still observed the IBRE.
 In both experiments, the IBRE occurred without any explicit detail in the experimental procedure that would result in prediction error.
 Therefore, any theorised error-driven process must be able to operate without explicit feedback.
 Most prominent theories and their corresponding formal specification rely on relocating attention in response to prediction error.
-They are unable to process the current experiment because they are not designed to encode information presented without feedback or fit cued recall tasks.
+They are unable to process the current experiment because they are not designed to encode information presented without feedback.
 
 The two experiments suggest that the necessary conditions to observe the IBRE are fewer than previously established.
 % LD: so it seems that Johansen et al treated asymmetric representation as an experimental condition and not as a theoretical construct
@@ -444,7 +449,7 @@ One hypothesised way asymmetric representation is manifested is the attentional 
 This is not necessarily absent in our experiments but is not directly tested.
 Our experiments do not give direct evidence against the role of attention in developing asymmetric representation.
 Nonetheless, it must not happen through an error-driven process as conceptualised in most prominent theories.
-To further investigate this, the cued-recall IBRE procedure could incorporate eye-tracking to measure dwell time and order of information encoding.
+To further investigate this, the unsupervised IBRE procedure could incorporate eye-tracking to measure dwell time and order of information encoding.
 Even if we observe more and longer fixations to C relative to B, attention can still be allocated asymmetrically to drive the distinguishability of categories.
 Explanations do not need to invoke an explicit error-driven process.
 
