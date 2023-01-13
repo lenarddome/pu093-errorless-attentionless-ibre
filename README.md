@@ -38,42 +38,6 @@ Even the narrower claim that they are the only studies using neuroscience method
 9. You also go on to discuss Johansen's weird AB -> com, C -> rare design. I would drop this part of the discussion. As you say earlier, this isn't the IBRE, and it's pretty easy to explain with any old associative network.
 
 Second, I guess what they provide is
-## p. 2
-
-- Experiment 1 "will present category labels simultaneously with their respective features" perhaps?
-
-- Footnote 1, perhaps give the github repo?
-
-## p.3
-
-- When participants were given a choice to move to test, did it say something like, "If you are confident you know what causes the diseases?" or somesuch. Would be worth saying what if any prompt participants were given to decide whether or not they were ready to be tested. 
-
-- Does the patient has -> Does the patient have
-
-- "Exclusion" - The bit "we arrived at this threshold..." could be shorter and clearer. I'd just say something like, accuracy of 0.75 is that lowest at which evidence the participant is above chance exceeds a Bayes Factor of 3, using the binomal test in Morey & Rouder. 
-
-- "In a summary" -> "in summary"
-
-- "People explicitly followed the base rate" . Add "For this cue,..." and then replace "On the contrary" with. "In contrast..."
-
-- I think you can and probably should dial down the deference to an experiment Johansen only reported incompletely in an appendix. What you wrtie on p.2 is fine, but on this page where you write that you have a "successful conceptual replication..." I would write something like "Thus, the current study strongly confirms that the IBRE can be observed in an observational procedure"
-
-- I would drop the sentence "This prediction error also drives the development of an asymmetric cog-
-nitive representation." entirely
-
-- "All current theories of the IBRE rely on the assumption that this irrational rare preference arises as
-a result of optimising accuracy during the training phase." - Do they? What about DGCM? What about ELMO? (Genuine question. But if they don't clearly rely on this then you of course should not say "all theories". Here and elsewhere, what you _can_ do is perhaps focus on EXIT-like theories being the most popular and successful accounts. 
-
-- "In the absence of this explicit prediction error..." ... I would say "EXIT-like theories cannot predict the presencce of an IBRE"
-
-- "One shortcoming of the current design is that participants
-can still make predictions" -> "One aspect of the current design is that participants might still experience internally-generated prediction errors.
-
-- "A simple solution" -> "In experiment 2, we address this by removing any design component..." and "We also use stimuli that reduce the the chance people assume any causal relationship between the features"
-
-## p.4
-
-- _How_ were X and Y selected in the test phase, by the participant. So, is it like, there are two shapes at the top of the screen - B, C, and then two at the bottom, X, Y, which the bottom set labelled "Press X", "Press Y"? 
 
 ## p.5
 
@@ -93,6 +57,12 @@ can still make predictions" -> "One aspect of the current design is that partici
 
 - Open Science: I guess you'll have to be a bit careful here in the sense of these links should presumably not act to deanonymise the submission?
 
+## Things to talk about but have been addressed
+
+
+- TODO: "All current theories of the IBRE rely on the assumption that this irrational rare preference arises as
+a result of optimising accuracy during the training phase." - Do they? What about DGCM? What about ELMO? (Genuine question. But if they don't clearly rely on this then you of course should not say "all theories". Here and elsewhere, what you _can_ do is perhaps focus on EXIT-like theories being the most popular and successful accounts. 
+
 ## DONE
 
 
@@ -106,3 +76,39 @@ can still make predictions" -> "One aspect of the current design is that partici
 - DONE: "When the ambiguous BC compound is presented..." - perhaps add "this attentional allocation persists, and thus..."?
 
 - DONE: "Any presumption of a causal relation-ship can inadvertently" -- change 'can' to 'might'?
+
+## p. 2
+
+- DONE: Experiment 1 "will present category labels simultaneously with their respective features" perhaps?
+
+- DONE: Footnote 1, perhaps give the github repo?
+    LD: It was a hyperlink, which I can see why might not be obvious :smile:
+
+## p.3
+
+- DONE: When participants were given a choice to move to test, did it say something like, "If you are confident you know what causes the diseases?" or somesuch. Would be worth saying what if any prompt participants were given to decide whether or not they were ready to be tested. 
+
+- DONE: Does the patient has -> Does the patient have
+
+- DONE: "Exclusion" - The bit "we arrived at this threshold..." could be shorter and clearer. I'd just say something like, accuracy of 0.75 is that lowest at which evidence the participant is above chance exceeds a Bayes Factor of 3, using the binomal test in Morey & Rouder. 
+
+- DONE: "In a summary" -> "in summary"
+
+- DONE: "People explicitly followed the base rate" . Add "For this cue,..." and then replace "On the contrary" with. "In contrast..."
+
+- DONE: I think you can and probably should dial down the deference to an experiment Johansen only reported incompletely in an appendix. What you wrtie on p.2 is fine, but on this page where you write that you have a "successful conceptual replication..." I would write something like "Thus, the current study strongly confirms that the IBRE can be observed in an observational procedure"
+
+- DONE: I would drop the sentence "This prediction error also drives the development of an asymmetric cog-
+nitive representation." entirely
+
+- DONE: "In the absence of this explicit prediction error..." ... I would say "EXIT-like theories cannot predict the presencce of an IBRE"
+
+- DONE: "One shortcoming of the current design is that participants
+can still make predictions" -> "One aspect of the current design is that participants might still experience internally-generated prediction errors.
+
+- DONE: "A simple solution" -> "In experiment 2, we address this by removing any design component..." and "We also use stimuli that reduce the the chance people assume any causal relationship between the features"
+
+
+## p.4
+
+- DONE: _How_ were X and Y selected in the test phase, by the participant. So, is it like, there are two shapes at the top of the screen - B, C, and then two at the bottom, X, Y, which the bottom set labelled "Press X", "Press Y"? 

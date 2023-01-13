@@ -175,7 +175,7 @@ In contrast, they looked for the neural substrates of error-driven processes inc
 
 Below, we detail our first attempt to test whether we could observe the rare response bias without an explicit error-driven psychological mechanism.
 The design component which is most likely to result in any error-driven tuning is feedback.
-To remove feedback, we will present category labels with their respective features.
+To remove feedback, Experiment 1 will present category labels simultaneously with their respective features.
 We retain the sequential property of the experiment, which means that participants learn about feature and category relationships on a trial-by-trial basis.
 % LD: work out how models might predict rational responding?
 
@@ -203,7 +203,7 @@ Category features were symptoms: fever, headache, and rash.
 These physical features were randomly allocated to abstract features, A, B, and C at the beginning of each session.
 Features and labels appeared in full sentences, such as '\textit{John has fever and rash, which belongs to disease Z}'.
 Names were randomly drawn from a pool of male and female first names.
-The list was compiled from an online repository of popular baby names\footnote[1]{The list was taken and later curated from \href{https://github.com/aruljohn/popular-baby-names}{a GitHub repository}.}.
+The list was compiled from an online repository of popular baby names\footnote[1]{The list was taken and later curated from a GitHub repository: \href{https://github.com/aruljohn/popular-baby-names}{https://github.com/aruljohn/popular-baby-names}.}.
 We selected the 50 most popular male and female names from 2021.
 Disease names corresponded to response keys and were randomly allocated to either the common or rare category label at the beginning of each session.
 
@@ -220,10 +220,11 @@ If the 5 seconds threshold has passed, a screen appeared with the message '\text
 In each training block, participants encountered 6 common diseases (common category exemplars) and 2 rare diseases (rare category exemplars).
 After the second block of training, participants were given a choice.
 They could either move straight to the test phase or complete another training block.
+A prompt appeared saying that '\textit{Now you have the option to skip the rest of the training phase and move straight to the test phase. If you think you need some more time, you can continue training and study more patients.}'.
 There were a maximum of 5 blocks they could complete.
 
 In the test phase, participants judged individual symptoms and novel combinations of old symptoms, see Table \ref*{tab:abstract-exp1}.
-Symptoms appeared in a sentence, such as '\textit{John has a fever.}', with a prompt asking participants to label what disease the person has, '\textit{Does the patient has disease Z or disease L?}'.
+Symptoms appeared in a sentence, such as '\textit{John has a fever.}', with a prompt asking participants to label what disease the person has, '\textit{Does the patient have disease Z or disease L?}'.
 Participants had to respond by pressing either Z or L on the keyboard.
 They had 10 seconds to do so, otherwise, a '\textit{Please respond faster!}' message appeared.
 After the button press, there was no feedback,
@@ -259,19 +260,18 @@ We used the method implemented in the BayesFactor R package \cite{morey2022bayes
 \subsubsection{Exclusion}
 
 To match performance with the predictive learning implementations of the IBRE, we decided to exclude participants whose test performance on the training items fell below 0.75 accuracy.
-We arrived at this threshold by testing all different levels of accuracy by calculating the Bayes factors for binomial data.
-We used the method implemented in BayesFactor R package \cite{morey2022bayes}.
-If the Bayes Factor fell above 3, we concluded that we have sufficient evidence to believe the participant learned the training items.
+This level of accuracy was the lowest at which the evidence that the participant performed better than chance was above the Bayes Factor of 3.
+We calculated the Bayes Factor for binomial proportions via the method implemented in BayesFactor R package \cite{morey2022bayes}.
 
 \subsection{Results and Discussion}
 
 After exclusion, 125 participants made it into our main analysis.
-In a summary, the qualitative pattern in our results corresponds to the base result of the IBRE.
+In summary, the qualitative pattern in our results corresponds to the base result of the IBRE.
 Table \ref*{tab:results-exp1} shows the group-level probabilities for each item.
 Predictive features and training items are classified into their respective category.
 Participants exhibited a reliable common preference for $A$, $M_{A} = 0.68$, 95\% HDI $[0.63, 0.73]$, $\mathrm{BF}_{10} = 2.45 \times 10^{7}$.
-People explicitly followed the base rate  - responded rationally according to Probability Theory.
-On the contrary, participants showed a reliable rare preference for $BC$, $M_{BC} = 0.67$, 95\% HDI $[0.62, 0.72]$, $\mathrm{BF}_{10} = 1.11 \times 10^{7}$.
+For this cue, people explicitly followed the base rate - responded rationally according to Probability Theory.
+In contrast, participants showed a reliable rare preference for $BC$, $M_{BC} = 0.67$, 95\% HDI $[0.62, 0.72]$, $\mathrm{BF}_{10} = 1.11 \times 10^{7}$.
 This gives us a sufficient amount of evidence to conclude that we have observed the IBRE.
 
 \begin{table}[ht]
@@ -293,20 +293,20 @@ This gives us a sufficient amount of evidence to conclude that we have observed 
   \end{center}
 \end{table}
 
-Here, we report a successful conceptual replication of an observational learning IBRE procedure reported by \cite{johansen2007paradoxical}.
+Thus the current study strongly confirms that the IBRE can be observed in an observational procedure.
 In the current experimental design, the IBRE emerged in the absence of an explicit prediction error that drives the development of attentional allocation.
-This prediction error also drives the development of an asymmetric cognitive representation.
-All current theories of the IBRE rely on the assumption that this irrational rare preference arises as a result of optimising accuracy during the training phase.
-In the absence of this explicit prediction error, current theories cannot deal with encoding this type of input representation.
+% This prediction error also drives the development of an asymmetric cognitive representation.
+All EXIT-like theories of the IBRE rely on the assumption that this irrational rare preference arises as a result of optimising accuracy during the training phase.
+In the absence of this explicit prediction error, EXIT-like theories cannot predict the presence of the IBRE.
 
-One shortcoming of the current design is that participants can still make predictions about feature--category on a trial-by-trial basis.
+One aspect of the current design is that participants can still experience internally-generated prediction errors from feature to categories on a trial-by-trial basis.
 Given that the general assumption is that diseases cause symptoms, participants could likely assume a causal link between symptoms and diseases.
 This assumed causal relationship can encourage participants to make not an explicit (responding with the category label via the keyboard) but an implicit prediction.
 Informally, participants might think of a certain feature--label causal relationship while reading the sentences.
 People then resolve errors between the expected and the observed feature--label causality by allocating attention to rare features to distinguish diseases.
 
-A simple solution is to remove any design component that makes it clear to participants what the category label is.
-In addition, stimuli need to be constructed in a way that reduces the chance of people assuming any causal relationship between its features.
+In Experiment 2, we adress this by removing any design component that makes it clear to participants what the category label is.
+And we also use stimuli that reduces the chance of people assuming any causal relationship between its features.
 
 \section{Experiment 2}
 
@@ -367,7 +367,11 @@ The trial structure and response deadlines corresponded to Experiment 1.
 
 In the test phase, participants were shown \textit{incomplete} arrangement of geometric shapes and were asked to complete them.
 On each test trial, they were asked to select either \textbf{X} or \textbf{Y} to complete the arrangement.
-Similar to Experiment 1, each test item (incomplete arrangement of shapes) appeared 20 times. 
+Similar to Experiment 1, each test item (incomplete arrangement of shapes) appeared 20 times.
+Various arrangement of shapes appeared in the middle of the screen.
+The response options X and Y with the corresponding shapes were shown below.
+The prompt asked participants to pick one of the shapes to complete the arrangement.
+Participants could respond by pressing either X or Y on the keyboard.
 Similarly, the test phase was composed of 120 trials presented across 5 blocks of 24 trials.
 
 \subsubsection{Analysis and Exclusion}
