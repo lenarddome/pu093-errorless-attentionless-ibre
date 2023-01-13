@@ -38,18 +38,6 @@ Even the narrower claim that they are the only studies using neuroscience method
 9. You also go on to discuss Johansen's weird AB -> com, C -> rare design. I would drop this part of the discussion. As you say earlier, this isn't the IBRE, and it's pretty easy to explain with any old associative network.
 
 Second, I guess what they provide is
-
-### p.1 
-
-- In the first section of the introduction, it might be worth having an in-text design summarey e.g. after the Kruschke 96 ref, something like. "The training can be summarised thus: AB -> common, AC -> rare"
-
-
-- In col. 2, first para, perhaps say why an error on AC is likely (generalization from AB via A).?
-
-- "When the ambiguous BC compound is presented..." - perhaps add "this attentional allocation persists, and thus..."?
-
-- "Any presumption of a causal relation-ship can inadvertently" -- change 'can' to 'might'?
-
 ## p. 2
 
 - Experiment 1 "will present category labels simultaneously with their respective features" perhaps?
@@ -104,3 +92,17 @@ can still make predictions" -> "One aspect of the current design is that partici
 - Conclusion. "Whether the IBRE requires error-driven components of the experimental procedure" -> "whether demonstration of the IBRE requires the "guess and correct" components of the standard experiment procedure. You may need to revisit anyway given the various points I've made above.
 
 - Open Science: I guess you'll have to be a bit careful here in the sense of these links should presumably not act to deanonymise the submission?
+
+## DONE
+
+
+### p.1 
+
+- DONE: In the first section of the introduction, it might be worth having an in-text design summarey e.g. after the Kruschke 96 ref, something like. "The training can be summarised thus: AB -> common, AC -> rare"
+
+
+- DONE: In col. 2, first para, perhaps say why an error on AC is likely (generalization from AB via A).?
+
+- DONE: "When the ambiguous BC compound is presented..." - perhaps add "this attentional allocation persists, and thus..."?
+
+- DONE: "Any presumption of a causal relation-ship can inadvertently" -- change 'can' to 'might'?

@@ -87,7 +87,8 @@ irrationality; prediction error; inverse base-rate effect; categorization; conti
 
 The \textit{inverse base-rate effect} \cite<IBRE, >{medin1988problem} is an irrational tendency in humans to overweigh rare events when faced with ambiguity.
 In a traditional design, people learn to categorise two overlapping sets of features under two distinct category labels.
-These sets share a single feature, A, and possess a unique feature, B and C, predictive of their respective category label.
+These sets share a single feature, $A$, and possess a unique feature, $B$ and $C$, predictive of their respective category label.
+The training thus can be summarised under two trial types, which we will express as $AB \to common$ and $AC \to rare$.
 During learning, these sets of features occur at different frequencies.
 The features under the common label usually occur three times as much as features under the rare label \cite{kruschke1996base}.
 Following training, people categorise features presented by themselves and in novel combinations.
@@ -106,12 +107,14 @@ These theories are formal models.
 They are: a neural network with an exemplar-mediated attention to distinctive input, EXIT \cite{kruschke2001toward}, a three-layer neural network with competitive attentional gating, and a four-layer neural network with an additional rapid attentional shift \cite{paskewitz2020dissecting}.
 All these explanations rely on a process that relocates attention in response to prediction errors - they update attentional values according to gradient descent.
 Their explanation is simple.
-During learning, people learn to label the AB compound first.
-They are still learning to label the AC compound, so when they make an error, attention relocates towards the uniquely predictive feature C to reduce future errors.
-This results in C acquiring higher attentional salience than B.
-When the ambiguous BC compound is presented, C will dominate responding, resulting in an irrational tendency to respond with the rare label.
+During learning, people learn to label the $AB$ compound first, but they are still learning to label the $AC$ compound.
+The presence of $A$ tend to push participants to generalise what they learned about $AB$, so they label $AC$ as common, which results in an error.
+After making this error, attention relocates towards the uniquely predictive feature $C$ to reduce future errors.
+This results in $C$ acquiring higher attentional salience than $B$.
+When the ambiguous $BC$ compound is presented, this attentional allocation presists and thus $C$ will dominate responding.
+This results in an irrational tendency to respond with the rare label.
 According to these models, this irrationality results from an optimisation process that tries to reduce the errors people make.
-This process creates an asymmetric cognitive representation that can be summarised as AB belongs to common, $AB \to common$, and C belongs to rare, $C \to rare$ \cite{kruschke2001inverse}.
+This process creates an asymmetric cognitive representation that can be summarised as $AB$ belongs to common, $AB \to common$, and C belongs to rare, $C \to rare$ \cite{kruschke2001inverse}.
 
 \subsection{Current Study}
 
@@ -122,7 +125,7 @@ In our first attempt, building on the observational learning condition of Experi
 
 In our second attempt, we further remove the causal relationship between features and category labels.
 The goal was to remove any design component that might affect attentional allocation or the development of asymmetric representation in response to errors.
-Any presumption of a causal relationship can inadvertently relocate attention in line with the direction of causality between features and labels.
+Any presumption of a causal relationship might inadvertently relocate attention in line with the direction of causality between features and labels.
 
 \subsection{Related Work}
 
