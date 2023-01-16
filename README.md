@@ -9,16 +9,8 @@ This was a lot better than I had assumed it would be, given your comments about 
 
 Apologies for dumping my comments on the README of the main branch, but I thought initially I was just gonna make a few top-level comments :-)
 
-
-
 2. There are other theories of the IBRE e.g. DGCM, ELMO, that don't so explicitly involve error-driven learning. Might you need to say something about them somewhere?
     - **Include in discussion section** dgcm no mechanisms for attention but could accommodate results due to its vagueness?
-
-3. I can see why you might want to cover Inkster 2022 and Wills 2014. The current presentation needs some tweaking. First, the claim that they are the only two sutdies "direclty looking at error driven processes..." is too broad an bold.
-Even the narrower claim that they are the only studies using neuroscience methods is too bold because ... O'Bryan, and also Kruschke's eye-tracking of highlighting, which is pretty close. Dealing with O'Bryan probably comes under the heading of Thought 2. But that still leaves 3 studies. And what these show is that, under the standard guess-and-correct procedure, (1) EEG and eyetracking data implies there is attentional reallocation in the manner supposed by models like EXIT (that's Wills 2014 and Kruschke's paper), and (2) brain areas previously implicated in the calculation of prediction error may be responsible for that (Inkster, 2022). So, there's a reasonable case that attentional reallocation happens in the standard procedure and that it is driven by prediction error. This is of course a different question to whether such processes are _necessary_ for a demonstration of IBRE, which is what your work is investigating. So maybe redraft the final para of the introduction more in this way?
-
-8. In Discussion, p. 5, "- "Compared to Johansen". I don't think we can say anything about asymmetric representation definitively? For example, we talked about running eye-tracking versions of these two studies. If we found asymetric dwell times in those studies, wouldn't that imply asymmetric representation? For now, we don't know. That whole paragraph probably needs some further thought.
-    LD: Maybe I shouldn't go into it, but their reasoning is similar to when parts of the explanations are confused with what they are trying to explain. So my reasoning is as follows: asymmetric cogntive representation is hypothesised to underly the inverse base-rate effect. If we were to observe asymmetric dwell time, that would essentially mean that at least as far as visual attention goes, we have evidence for asymmetric representation as it is conceptualised by some theories. If we want to push it further, we might do multivoxel pattern analysis, and so on and so on. If we don't see the inverse base-rate effect with a non-asymmetric dwell times in the traditional design, than we wouldn't see it. So this was kind of my reasoning here, although handled poorly in the text.
 
 Second, I guess what they provide is
 
@@ -30,7 +22,6 @@ Second, I guess what they provide is
 - TODO: "All current theories of the IBRE rely on the assumption that this irrational rare preference arises as a result of optimising accuracy during the training phase." - Do they? What about DGCM? What about ELMO? (Genuine question. But if they don't clearly rely on this then you of course should not say "all theories". Here and elsewhere, what you _can_ do is perhaps focus on EXIT-like theories being the most popular and successful accounts.
 
 ## DONE
-
 
 ### High-level comments
 
@@ -54,6 +45,13 @@ LD: There was no information provided.
 
 9. DONE: You also go on to discuss Johansen's weird AB -> com, C -> rare design. I would drop this part of the discussion. As you say earlier, this isn't the IBRE, and it's pretty easy to explain with any old associative network.
     LD: Dropped it.
+
+
+3. DONE: I can see why you might want to cover Inkster 2022 and Wills 2014. The current presentation needs some tweaking. First, the claim that they are the only two sutdies "direclty looking at error driven processes..." is too broad an bold.
+Even the narrower claim that they are the only studies using neuroscience methods is too bold because ... O'Bryan, and also Kruschke's eye-tracking of highlighting, which is pretty close. Dealing with O'Bryan probably comes under the heading of Thought 2. But that still leaves 3 studies. And what these show is that, under the standard guess-and-correct procedure, (1) EEG and eyetracking data implies there is attentional reallocation in the manner supposed by models like EXIT (that's Wills 2014 and Kruschke's paper), and (2) brain areas previously implicated in the calculation of prediction error may be responsible for that (Inkster, 2022). So, there's a reasonable case that attentional reallocation happens in the standard procedure and that it is driven by prediction error. This is of course a different question to whether such processes are _necessary_ for a demonstration of IBRE, which is what your work is investigating. So maybe redraft the final para of the introduction more in this way?
+
+8. DONE: In Discussion, p. 5, "- "Compared to Johansen". I don't think we can say anything about asymmetric representation definitively? For example, we talked about running eye-tracking versions of these two studies. If we found asymetric dwell times in those studies, wouldn't that imply asymmetric representation? For now, we don't know. That whole paragraph probably needs some further thought.
+    LD: Maybe I shouldn't go into it, but their reasoning is similar to when parts of the explanations are confused with what they are trying to explain. So my reasoning is as follows: asymmetric cogntive representation is hypothesised to underly the inverse base-rate effect. If we were to observe asymmetric dwell time, that would essentially mean that at least as far as visual attention goes, we have evidence for asymmetric representation as it is conceptualised by some theories. If we want to push it further, we might do multivoxel pattern analysis, and so on and so on. If we don't see the inverse base-rate effect with a non-asymmetric dwell times in the traditional design, than we wouldn't see it. So this was kind of my reasoning here, although handled poorly in the text.
 
 ### p.1 
 
