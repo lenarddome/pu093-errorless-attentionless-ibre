@@ -8,19 +8,6 @@ CogSci Proceeding for an errorles and attentionless implementation of the invers
 This was a lot better than I had assumed it would be, given your comments about it being an early draft and asking I focus of structure etc :-) It's actually really well written, well done! I've made some phrasing comments, because I thought in terms of readability it was close enough that it made sense for me to do that. There are however a few substnative issues you need to address - things that an alert reviewer is likely to pick up on and cause trouble about, so there's a need to fix before submission. I think probably you should aim to get me to look at another version before submission - not so much for readability, but for ensuring the substnative content is as good as it can be. We can also talk through the substantive issues when we meet on Monday if that's helpful.
 
 Apologies for dumping my comments on the README of the main branch, but I thought initially I was just gonna make a few top-level comments :-)
-
-2. There are other theories of the IBRE e.g. DGCM, ELMO, that don't so explicitly involve error-driven learning. Might you need to say something about them somewhere?
-    - **Include in discussion section** dgcm no mechanisms for attention but could accommodate results due to its vagueness?
-
-Second, I guess what they provide is
-
-- Conclusion. "Whether the IBRE requires error-driven components of the experimental procedure" -> "whether demonstration of the IBRE requires the "guess and correct" components of the standard experiment procedure. You may need to revisit anyway given the various points I've made above.
-
-## Things to talk about but have been addressed
-
-
-- TODO: "All current theories of the IBRE rely on the assumption that this irrational rare preference arises as a result of optimising accuracy during the training phase." - Do they? What about DGCM? What about ELMO? (Genuine question. But if they don't clearly rely on this then you of course should not say "all theories". Here and elsewhere, what you _can_ do is perhaps focus on EXIT-like theories being the most popular and successful accounts.
-
 ## DONE
 
 ### High-level comments
@@ -40,7 +27,7 @@ Second, I guess what they provide is
 
 5. DONE: Wasn't some of this data collected as part of an UG project? Use an acknowledgement section to thank them (I guess anonymized in the initial submission). I'm guessing the actual authors are: Dome & Wills, right? 
 
-6. Before submission, check whether US spelling is expected (e.g. memorise -> memorize). 
+6. DONE: Before submission, check whether US spelling is expected (e.g. memorise -> memorize). 
 LD: There was no information provided.
 
 9. DONE: You also go on to discuss Johansen's weird AB -> com, C -> rare design. I would drop this part of the discussion. As you say earlier, this isn't the IBRE, and it's pretty easy to explain with any old associative network.
@@ -52,6 +39,10 @@ Even the narrower claim that they are the only studies using neuroscience method
 
 8. DONE: In Discussion, p. 5, "- "Compared to Johansen". I don't think we can say anything about asymmetric representation definitively? For example, we talked about running eye-tracking versions of these two studies. If we found asymetric dwell times in those studies, wouldn't that imply asymmetric representation? For now, we don't know. That whole paragraph probably needs some further thought.
     LD: Maybe I shouldn't go into it, but their reasoning is similar to when parts of the explanations are confused with what they are trying to explain. So my reasoning is as follows: asymmetric cogntive representation is hypothesised to underly the inverse base-rate effect. If we were to observe asymmetric dwell time, that would essentially mean that at least as far as visual attention goes, we have evidence for asymmetric representation as it is conceptualised by some theories. If we want to push it further, we might do multivoxel pattern analysis, and so on and so on. If we don't see the inverse base-rate effect with a non-asymmetric dwell times in the traditional design, than we wouldn't see it. So this was kind of my reasoning here, although handled poorly in the text.
+
+
+2. DONE: There are other theories of the IBRE e.g. DGCM, ELMO, that don't so explicitly involve error-driven learning. Might you need to say something about them somewhere?
+    - **Include in discussion section** dgcm no mechanisms for attention but could accommodate results due to its vagueness?
 
 ### p.1 
 
@@ -115,3 +106,8 @@ can still make predictions" -> "One aspect of the current design is that partici
 - DONE: "unable to process" -> "unable to accommodate"
 
 - DONE: Open Science: I guess you'll have to be a bit careful here in the sense of these links should presumably not act to deanonymise the submission?
+
+- DONE: Conclusion. "Whether the IBRE requires error-driven components of the experimental procedure" -> "whether demonstration of the IBRE requires the "guess and correct" components of the standard experiment procedure. You may need to revisit anyway given the various points I've made above.
+
+
+- DONE: "All current theories of the IBRE rely on the assumption that this irrational rare preference arises as a result of optimising accuracy during the training phase." - Do they? What about DGCM? What about ELMO? (Genuine question. But if they don't clearly rely on this then you of course should not say "all theories". Here and elsewhere, what you _can_ do is perhaps focus on EXIT-like theories being the most popular and successful accounts.
