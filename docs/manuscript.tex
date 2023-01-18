@@ -131,9 +131,12 @@ Any presumption of a causal relationship might inadvertently relocate attention 
 To our knowledge, there is only one attempt to implement the IBRE procedure without explicit feedback.
 In terms of a clear observational-learning version of the IBRE, \citeA{johansen2007paradoxical} included the result of a short pilot experiment in their Appendix.
 Unfortunately, there is no statistical analysis confirming that $BC \to rare$ is reliably different than $BC \to common$.
-Given the sample size they report, the study is underpowered \footnote{\citeA{johansen2007paradoxical} reports a sample size of $n = 16$. If we assume an effect size of $d = 0.46$ observed in \citeA{inkster2022neural} and an $\alpha = 0.05$ with a non-directional alternative hypothesis, the experiment has $power = 0.24$. We used the method provided by the R package pwr \cite{champely2020pwr} to calculate power.}.
+\citeA{johansen2007paradoxical} report a sample size of $n = 16$.
+If we use an effect size of $d = 0.46$ observed by \citeA{inkster2022neural} and an $\alpha = 0.05$ with a non-directional alternative hypothesis, the experiment has $power = 0.24$\footnote{We used the method provided by the R package pwr \cite{champely2020pwr} to calculate power.}.
+Given this information, the study is underpowered.
 There are also no details about the procedure of this experiment.
 Therefore, we cannot make direct comparisons.
+
 Nonetheless, in their Experiment 2, \citeA{johansen2007paradoxical} tried to observe the inverse base-rate effect both in a predictive-learning condition and in an observational-learning condition.
 In the observational learning condition, category labels and features appeared together at the same time on the computer screen.
 Their design involved disjoint cues where categories shared no features in common.
@@ -156,22 +159,20 @@ After learning about feature-label information in this manner, participants did 
 These experiments give us evidence about another boundary condition for the IBRE - sequential presentation of training items.
 % Need to elaborate why this is relevant.
 
-Additionally, there are at least three studies which look at error-driven processes in the IBRE.
+Additionally, there are at least three studies which directly look at error-driven processes in the IBRE.
 \citeA{don2019learned} demonstrated that on $AC$ trials, people fixated on $C$ longer than on $A$ both pre-responding during stimulus presentation and post-responding during feedback.
 This fixation bias increased with more training.
 They also observe greater fixation on $C$ on $AC$ trials, relative to $B$ on $BC$ trials.
-Interestingly, there was no difference between the fixation time of $C$ and $B$ during $BC$ trials.
-% still consistents with EXIT
-\citeA{wills2014attention} observed posterior selection negativity and concurrent frontal positivity for C relative to B, which gave evidence for an error-driven selective attentional learning process.
-These studies gave evidence that attentional reallocation occurs in line with the mechanisms of EXIT.
+Furthermore, \citeA{wills2014attention} observed posterior selection negativity and concurrent frontal positivity for C relative to B, which gave evidence for an error-driven selective attentional learning process.
+These studies gave evidence that attentional reallocation occurs in line with the mechanisms of EXIT-like models.
 \citeA{inkster2022neural} carried out a direct investigation into brain regions underlying error-driven learning in the IBRE.
 Their ROI analysis explicitly targeted areas that were hypothesised to be involved in the computation of prediction error.
 They showed that these areas exhibited greater activation during the test phase for C relative to B with a presence of a shared cue during training.
-It is reasonable to suggest that attentional occurs in a standard supervised learning paradigm and it is driven by prediction error.
-These three studies, \citeA{kruschke2005eye}, \citeA{wills2014attention} and \citeA{inkster2022neural} gave strong evidence in support of error-driven attentional learning accounts of the IBRE.
+Given these findings, it is reasonable to suggest that attentional reallocation occurs in a standard supervised learning paradigm and it is driven by prediction error.
+These three studies, \citeA{kruschke2005eye}, \citeA{wills2014attention} and \citeA{inkster2022neural} gave strong evidence in support of the error-driven attentional learning accounts of the IBRE.
+In sum, these studies provide support for an attentional reallocation mechanism that is mediated by prediction error.
 In our study, we will look for the effect while trying to reduce the chance that cognitive processes calculate prediction error by modifying the experimental design.
 In contrast, they looked for the neural substrates of error-driven processes incorporated into explanations of the effect.
-In sum, these studies provide support for an attentional reallocation mechanism that is mediated by prediction error.
 % This presumes that prediction error is necessary for the inverse base-rate effect.
 % Arguably, one can predict that if there is no clear explicit design component (feedback) promoting prediction error as conceptualised in the models, the IBRE will not occur.
 
@@ -184,7 +185,7 @@ We retain the sequential property of the experiment, which means that participan
 % LD: work out how models might predict rational responding?
 
 Experiment 1 is a conceptual replication of an experiment included in the Appendix of \citeA{johansen2007paradoxical}.
-The only information available is the list of test items (23), the doubled-up design (2 sets of categories and features), and the sample size.
+The only information available from their report is the list of test items (23), the doubled-up design (2 sets of categories and features), and the sample size.
 We substantially simplified our implementation by removing the doubled-up design and reducing the number of test items to 6.
 
 \subsection{Method}
@@ -426,7 +427,7 @@ The experiment included no feedback and required no responses from participants 
 From a theoretical perspective, there was no opportunity for making an explicit error..
 Nevertheless, we observed the inverse base-rate effect.
 One limitation of this approach was that there are assumed causal relationships between features (symptoms) and labels (diseases).
-These relationships might predispose participants to make feature-to-label predictions, which will result in prediction error and attentional relocation.
+These relationships might predispose participants to make feature-to-label predictions, which will result in prediction error and attentional realllocation.
 
 In our second experiment, we further removed the causal relationship between features and labels by changing the stimuli and their presentation.
 Here, participants saw nothing but an arrangement of geometric shapes, where previous category labels were treated as features.
