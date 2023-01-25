@@ -143,12 +143,13 @@ In this format, the trial-by-trial presentation of training items was turned int
 Subsequently, participants made judgements about new cases on a separate page.
 In this condition, participants still exhibited a rare preference on $BC$ trials.
 In another condition of Experiment 3, participants received the information about outcome frequencies as a summary before testing.
+This summary was presented as prose.
 After learning about feature-label information in this manner, participants did not show the IBRE but was matching the base rate.
 These experiments give us evidence about another boundary condition for the IBRE - itemised rather than summerised presentation of training items.
 % Need to elaborate why this is relevant.
 
 Additionally, there are at least three studies which directly look at error-driven processes in the IBRE.
-\citeA{don2019learned}, demonstrated that on $AC$ trials, people fixated on $C$ longer than on $A$ both pre-responding during stimulus presentation and post-responding during feedback.
+\citeA{don2019learned}, demonstrated that on $AC$ trials, people fixated on $C$ longer than on $A$ both pre-responding during stimulus presentation and post-responding during feedback (see also \citeA{kruschke2005eye}).
 This fixation bias increased with more training.
 They also observe greater fixation on $C$ on $AC$ trials, relative to $B$ on $AB$ trials.
 Furthermore, \citeA{wills2014attention} in an EEG study observed posterior selection negativity and concurrent frontal positivity for C relative to B, which gave evidence for an error-driven selective attentional learning process.
@@ -240,6 +241,7 @@ If the Bayes Factor fell above 3, we concluded that participants' responses reli
 If the mean probability of $P(rare|BC)$ is higher than 0.5, we conclude that we observed the IBRE.
 Values lower than 0.5 would indicate base-rate following.
 We used the method implemented in the BayesFactor R package \cite{morey2022bayes}.
+\\
 
 \subsubsection{Exclusion}
 
@@ -378,6 +380,7 @@ Participants showed a clear common preference for stimuli A, $M_{A} = 0.78$, 95\
     \begin{tabular}{rcc}
       \hline
        & $P(common)$ & $P(rare)$ \\
+       \hline
       A & 0.78 & 0.22\\
       AB & 0.95 & 0.05\\
       AC & 0.08 & 0.92\\
@@ -413,9 +416,6 @@ There were no causal links between features and labels.
 When participants were asked to complete incomplete arrangements of these shapes, they still exhibited a rare bias on $BC$ trials.
 We still observed the IBRE.
 
-% LD: so it seems that Johansen et al treated asymmetric representation as an experimental condition and not as a theoretical construct
-% LD: I think this is a problem because asymmetric representation is hypothesized to be an asymmetry in the way the two categories represented
-
 The two experiments together suggest that the necessary conditions to observe the IBRE are fewer than previously established.
 In Experiment 2, the only remaining conditions are the two uniquely predictive features, an overlapping feature, sequential presentation and the base rate.
 One hypothesised way asymmetric representation is manifested is the attentional tuning of cognitive representation of category exemplars.
@@ -444,6 +444,7 @@ DGCM is a model of the test phase.
 In that sense, the current experimental manipulations cannot be represented in the model.
 This is the same challenge we encountered with process models - the specifications of these theories are unable to incorporate the changes to the experimental procedure.
 
+% TODO: mention that ELMO can't do the shared cue effect
 Another alternative explanation is an eliminative-inference model \cite<ELMO, >{juslin2001high}.
 This approach considers the $BC \to rare$ bias to result from rule-learning and post-training inferential processes during $BC$ trials.
 The process is most similar to \textit{strategic guessing} \cite{kruschke1995extensions}.
@@ -453,6 +454,7 @@ Informally, ELMO could accommodate the observational learning paradigm, because 
 Participants could extract the same rules hypothesised to underlie the rare bias in the standard procedure.
 Due to this presumed causality, ELMO could hypothesise that people encode rules about symptoms and diseases, which will similarly result in $BC \to rare$ during test.
 But it is unclear how it could deal with the cued-recall implementation, as there is no clear-cut feature-to-label relationship in the stimuli presentation that drives rule formation.
+In addition, ELMO also predicts the IBRE in the absence of a shared cue, even though humans do not show the IBRE under those conditions \cite{kruschke2001inverse}.
 % One possibility is to assume that rules are formed between features only, but ELMO is not designed to deal with between-feature relationships.
 
 \section{Conclusion}
