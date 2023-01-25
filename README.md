@@ -2,8 +2,7 @@
 
 CogSci Proceeding for an errorles and attentionless implementation of the inverse base-rate effect
 
-
-## Some thoughts from Andy
+# Some thoughts from Andy
 
 This was a lot better than I had assumed it would be, given your comments about it being an early draft and asking I focus of structure etc :-) It's actually really well written, well done! I've made some phrasing comments, because I thought in terms of readability it was close enough that it made sense for me to do that. There are however a few substnative issues you need to address - things that an alert reviewer is likely to pick up on and cause trouble about, so there's a need to fix before submission. I think probably you should aim to get me to look at another version before submission - not so much for readability, but for ensuring the substnative content is as good as it can be. We can also talk through the substantive issues when we meet on Monday if that's helpful.
 
@@ -111,3 +110,102 @@ can still make predictions" -> "One aspect of the current design is that partici
 
 
 - DONE: "All current theories of the IBRE rely on the assumption that this irrational rare preference arises as a result of optimising accuracy during the training phase." - Do they? What about DGCM? What about ELMO? (Genuine question. But if they don't clearly rely on this then you of course should not say "all theories". Here and elsewhere, what you _can_ do is perhaps focus on EXIT-like theories being the most popular and successful accounts.
+
+
+# Some thoughts from Andy on second draft
+
+### General thoughts
+
+- A bit too long, right (over 6 pages)? As far as I recall, the page limit includes the references?
+
+- I would drop the paragraph on p.2 about Johansen Exp. 2 entirely, irrespective of how long the paper is. You just don't need it, and it slows and fogs the narrative.
+
+- I've some questions about the exclusion criterion in Experiment 2. First, it seems to be different to Experiment 1, which has no RT exclusion - this difference is not justified in the text and seems hard to justify on the face on it. Second, on what part of the experiment is it applied? Study? Test? Both? Third, it seems to be pretty harsh. By definition, in a normal distribution at least, 1 s.d. below is going to exclude about 17% of participants. And the RT at which it cuts people out - about 800ms - although fast, is not obviously a person blowing off the experiment. And was there no need to exclude any very long mean RTs (e.g. 10s of seconds)? Overall, I think this needs some more thought. Given the time remaining, perhaps see if it still works (i.e. BF > 3) without this additional Experiment 2 exclusion criterion?
+
+### p.1 
+
+twice as much -> twice as often 
+
+"tend to show base rate following" -> add "(i.e. A -> common)" or similar.
+
+"a different variety" -> "a variety"
+
+"an attentional mechanism that drives not only learning but responding as well." -> "an attentional meachanism that drives both learning and responding"
+
+## p.2 
+
+"Unfortunately, there is no statistical anal- ysis confirming that BC → rare is reliably different than BC → common." -> "...confirming that the IBRE is reliably observed".
+
+"a sample size of n = 16" -> "a sample size of 16"
+
+"an α = 0.05" -> "an α of 0.05"
+
+"has power = 0.24" -> "has 24% power, which is substantially underpowered" (and drop next sentence)
+
+"To our knowledge, there is only one attempt to implement the IBRE procedure without explicit feedback." -> "...to implement the standard trial-by-trial IBR`e procedure without explicit feedback" ('cos you list two without this trial-by-trial caveat  - Johansen Appendix & 3)"
+
+I would drop discussion of Johansen exp. 2 - it's not needed and you don't have space.
+
+not "sequential" presentation, perhaps, because you don't know how people dealt with that list. Perhaps "itemized rather than summarised" presentation. And, perhaps earlier in the paragraph say that the summary was in the form of a table? (if I'm right about that?)
+
+"Furthermore, Wills et al. (2014)" -> add "in an EEG study"
+
+"ROI" -> "region of interest (ROI)" (should always define acronyms before use unless 100% all likely readers would know them"
+
+"atten- tional reallocation occurs in a standard supervised learning" -> "prediction-error-driven attentional reallocation" (and drop final clause of course)
+
+End of last intro para, from "...these three studies" - I would drop this and go straight to the "Experiment 1" section 
+
+Also, I not in that bit I'm saying to cut, you cite Kruschke's eye-track study, not previously mentioned in the intro. What I suggest you do here is, when you first introduce the Don study, put "(see also Kruschke, K.. & H..., 2005)" somewhere.
+
+"The rare response bias" -> add "to BC".
+
+"The only information available in their report..." - I would remove this and the rest of the paragraph onwards (so, keep the first sentence, remove the rest). You don't need it, it's unnecessarily negative, you don't have space, and it raises faux questions with likely reviewers about methodological details.
+
+## p. 3
+
+"threshold has passed" -> "threshold was passed"
+
+"label what disease" -> "say which disease"
+
+"test the presence" -> "test for the presence"
+
+"rational responding" -> "base rate following"
+
+## p. 4
+
+"can still experience" -> "might still experience"
+
+"an implicit prediction" -> "a silent prediction" ? "implict" has a number of connotations concerning access to conscious awareness that we probably don't want to get into here...
+
+"asked pariticipants to memorise the arrangement of shapes" - was that the instruction? Because the arrangement, as such, conveys no information, right? Because of spatial counterbalancing. If it was the instruction, no worries. But if not, consider a re-phrase.
+
+"Similarly, the test phase..." -> "The test phase..."
+
+See comments about exclusion criteria.
+
+## p. 5
+
+I think you do not need the decimal places on a six-figure BF :-)
+
+"which will result" -> which could result
+
+"the IBRE is partially caused" -> "the IBRE is caused". Let's go strong on this one!
+
+"Participants learned sentences..." - this sentence begins in the past tense and so should continue in that tense.
+
+"general context model" -> 'generalized context model"
+
+O'Bryan cite should be Author (date), not (Author, date). 
+
+## p.6
+
+Also worth mentioning that ELMO can't do the shared cue effect (i.e. presence of shared cue required for IBRE). Kruschke has a paper on this - I think you cite it elsewhere? Kruschke 2001a.
+
+"because of their inability" -> largely because? (given what you've just said about ELMO?)
+
+"We made available" -> "We have made available"
+
+Add a note to say links will be inserted when document is de-anonymised?
+
+"To Be Added" -> "[to be added on denonymization of paper]"
