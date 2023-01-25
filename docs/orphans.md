@@ -17,6 +17,14 @@ This contrasts Experiment 2 in \citeA{johansen2007paradoxical}, who tried to rem
 Here, we strictly focus on prediction error as the element of the experimental procedure.
 <!-- % LD: I will also need to include Experiment 3 listed shared cue condition? -->
 
+These three studies, \citeA{don2021learned}, \citeA{wills2014attention} and \citeA{inkster2022neural} gave strong evidence in support of the error-driven attentional learning accounts of the IBRE.
+In sum, these studies provide support for an attentional reallocation mechanism that is mediated by prediction error.
+In our study, we will look for the effect while trying to reduce the chance that cognitive processes calculate prediction error by modifying the experimental design.
+In contrast, they looked for the neural substrates of error-driven processes incorporated into explanations of the effect.
+% This presumes that prediction error is necessary for the inverse base-rate effect.
+% Arguably, one can predict that if there is no clear explicit design component (feedback) promoting prediction error as conceptualised in the models, the IBRE will not occur.
+
+
 # Discussion
 
 Compared to \citeA{johansen2007paradoxical}, we also do not consider asymmetric representation and base-rate neglect as necessary conditions.
