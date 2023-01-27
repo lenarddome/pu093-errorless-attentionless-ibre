@@ -101,7 +101,7 @@ For a more thorough introduction to this irrational bias, see a review by \citeA
 
 \subsection{Assumptions of theories of the IBRE}
 
-The most prominent theories of the inverse base-rate effect involve an an attentional meachanism that drives both learning and responding.
+The most prominent theories of the IBRE involve an an attentional meachanism that drives both learning and responding.
 These theories are formal models.
 They are: a neural network with exemplar-mediated attention to distinctive input, EXIT \cite{kruschke2001toward}, a three-layer neural network with competitive attentional gating, and a four-layer neural network with an additional rapid attentional shift \cite{paskewitz2020dissecting}.
 All these explanations rely on a process that relocates attention in response to prediction errors - they update attentional values according to gradient descent.
@@ -120,7 +120,7 @@ This process creates an asymmetric cognitive representation that can be summaris
 In this work, we intend to test this basic assumption of these theories.
 In the following two experiments, we will gradually remove components from the design traditionally associated with prediction error.
 Our overarching goal is to investigate whether we can still observe the IBRE, even if we experimentally remove a crucial assumption of already existing accounts.
-In our first attempt, building on the observational learning condition of Experiment 2 in \citeA{johansen2007paradoxical}, we implement the canonical IBRE design with a caveat that category labels are presented in unison with features.
+In our first attempt, we implement the canonical IBRE design with a caveat that category labels are presented in unison with features.
 
 In our second attempt, we further remove the causal relationship between features and category labels.
 The goal was to remove any design component that might affect attentional allocation or the development of asymmetric representation in response to errors.
@@ -133,7 +133,7 @@ In terms of a clear observational-learning version of the IBRE, \citeA{johansen2
 Unfortunately, there is no statistical analysis confirming that the IBRE is reliably observed.
 \citeA{johansen2007paradoxical} report a sample size of 16.
 If we use an effect size of $d = 0.46$ observed by \citeA{inkster2022neural} and an $\alpha$ of 0.05 with a non-directional alternative hypothesis, the experiment has 24\% power\footnote{We used the method provided by the R package pwr \cite{champely2020pwr} to calculate power.}.
-Given this information, the study is underpowered.
+Given this information, this pilot experiment is underpowered.
 There are also no details about the procedure of this experiment.
 Therefore, we cannot make direct comparisons.
 
@@ -156,7 +156,7 @@ Furthermore, \citeA{wills2014attention} in an EEG study observed posterior selec
 These studies gave evidence that attentional reallocation occurs in line with the mechanisms of EXIT-like models.
 \citeA{inkster2022neural} carried out a direct investigation into brain regions underlying error-driven learning in the IBRE.
 Their region of interest (ROI) analysis explicitly targeted areas that were hypothesised to be involved in the computation of prediction error.
-They showed that these areas exhibited greater activation during the test phase for $C$ relative to $B$ with a presence of a shared cue during training.
+They showed that these areas exhibited greater activation during the test phase for $C$ relative to $B$.
 Given these findings, it is reasonable to suggest that prediction-error-driven attentional reallocation occurs in a standard supervised learning paradigm and it is driven by prediction error.
 
 \section{Experiment 1}
@@ -194,6 +194,7 @@ Disease names corresponded to response keys and were randomly allocated to eithe
 
 \subsubsection{Procedure}
 
+% FIXME: training trials ended after 10 seconds
 Table \ref{tab:abstract-exp1} summarises the abstract design of the experiment.
 This design is the simplest implementation of the IBRE procedure to date.
 Participants completed two phases: a training and a test phase.
@@ -281,13 +282,12 @@ This gives us a sufficient amount of evidence to conclude that we have observed 
 
 Thus the current study strongly confirms that the IBRE can be observed in an observational procedure.
 In the current experimental design, the IBRE emerged in the absence of an explicit prediction error that drives the development of attentional allocation.
-% This prediction error also drives the development of an asymmetric cognitive representation.
 All EXIT-like theories of the IBRE rely on the assumption that this irrational rare preference arises as a result of optimising accuracy during the training phase.
 In the absence of this explicit prediction error, EXIT-like theories cannot predict the presence of the IBRE.
 
 One aspect of the current design is that participants might still experience internally-generated prediction errors from feature to categories on a trial-by-trial basis.
 Given that the general assumption is that diseases cause symptoms, participants could likely assume a causal link between symptoms and diseases.
-This assumed causal relationship can encourage participants to make not an explicit (responding with the category label via the keyboard) but a silent prediction.
+This assumed causal relationship can encourage participants to make not an explicit but a silent prediction.
 Informally, participants might think of a certain feature--label causal relationship while reading the sentences.
 People then resolve errors between the expected and the observed feature--label causality by allocating attention to rare features to distinguish diseases.
 
@@ -328,7 +328,7 @@ Each shape was randomly allocated to one of the abstract features shown in Table
 
 \begin{table}[!ht]
   \begin{center}
-    \caption{Abstract design of Experiment 2 including both test and training phases. X and Y are in place of the category labels. During the test phase, participants needed to select either X or Y to complete the features shown below.\\}
+    \caption{Abstract design of Experiment 2 including both test and training phases. X and Y are in place of the category labels common and rare. During the test phase, participants needed to select either X or Y to complete the features shown below.\\}
     \label{tab:abstract-exp2}
     \begin{tabular}{llr} % text alignments
       \textbf{Training (Relative Frequencies)} & \textbf{Test}& \\
@@ -351,7 +351,7 @@ Similar to Experiment 1, participants could complete a maximum of 5 blocks.
 After the first block, they were given a chance after completing each block to move straight to the test phase.
 The trial structure and response deadlines corresponded to Experiment 1.
 
-In the test phase, participants were shown \textit{incomplete} arrangement of geometric shapes and were asked to complete them.
+In the test phase, participants were shown \textit{incomplete} arrangements of geometric shapes and were asked to complete them.
 On each test trial, they were asked to select either \textbf{X} or \textbf{Y} to complete the arrangement.
 Similar to Experiment 1, each test item (incomplete arrangement of shapes) appeared 20 times.
 Various arrangement of shapes appeared in the middle of the screen.
@@ -437,7 +437,7 @@ Our results suggest that there could be a secondary cause of the IBRE not captur
 
 There are alternative theories of the IBRE that do not rely on processes that calculate prediction error.
 A version of the dissimilarity-similarity generalised context model \citeA<DGCM, >{stewart2007dissimilarity} modified by \citeA{o2018model} has been proposed as an explanation of the IBRE.
-From the perspective of DGCM, the main processes behind the rare preference are a combination of attention, memory strenght of exemplars and dissimilarity from exemplars (stored category representations).
+From the perspective of DGCM, the main processes behind the rare preference are a combination of attention, memory strength of exemplars and dissimilarity from exemplars (stored category representations).
 $BC \to rare$ arises due to the combination of two factors: the high salience of $C$ relative to $B$ and the impact of the dissimilarity of $BC$ to the common category exemplar on the decision process.
 Nonetheless, the model can accommodate these results only informally because it does not specify the mechanisms which encode information and produce the attentional values of each stimulus.
 DGCM is a model of the test phase.
@@ -459,6 +459,7 @@ In addition, ELMO also predicts the IBRE in the absence of a shared cue, even th
 
 \section{Conclusion}
 
+% TODO: introduce guess-and-correct before the conclusion
 Across two experiments, we investigated whether the demonstration of the IBRE requires the "guess-and-correct" components of the standard experimental procedure.
 In Experiment 1, we conducted a successful conceptual replication of \citeA{johansen2007paradoxical}, which gave evidence for the IBRE being independent of supervised learning procedures.
 In addition, Experiment 2 further suggests that the IBRE generalises beyond simple predictive-learning \cite<e.g. >{medin1988problem,kruschke1996base,wills2014attention} and decision-making \cite{johansen2007paradoxical} paradigms.
@@ -471,7 +472,7 @@ We have made available the two experiments written in javascript, the analysis c
 Experiment 1 is shared via \href{https://osf.io/auwvt/?view_only=2dc8384074fa4bcf9f2e3937fdaee2b4}{OSF}, and \href{TBA}{GitHub}.
 Experiment 2 is shared via \href{https://osf.io/2tmc4/?view_only=489ebc888ef84a6b9b904072cfbe74df}{OSF} and \href{TBA}{Github}.
 The main repository that includes this manuscript and links to the materials for the two experiments can be found on \href{TBA}{GitHub}.
-Links will be inserted when document is deanonymized.
+GitHub links will be inserted when document is deanonymized.
 
 \section{Acknowledgement}
 
